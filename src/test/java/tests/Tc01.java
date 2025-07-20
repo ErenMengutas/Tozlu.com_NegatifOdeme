@@ -30,6 +30,12 @@ public class Tc01 extends TestBaseRapor {
         extentTest.info("Kullanici tozlu.com'a gider");
         Driver.getDriver().get(ConfigReader.getProperty("toUrl"));
 
+        //Site belirli zamanlarda kampanya yapıyor ve bazı uyarı yazıları çıkıyor dinamik olması için if bloğu kullanıldı.
+        if (tozluPages.anaSayfaKampanyaKapatmaButonu.isDisplayed())
+        {
+            tozluPages.anaSayfaKampanyaKapatmaButonu.click();
+        }
+
         extentTest.info("Test datalarindan aldigi kullanici email ve sifresi ile giris yapar.");
         tozluPages.girisYapSekmesi.click();
         tozluPages.epostaGiris.click();

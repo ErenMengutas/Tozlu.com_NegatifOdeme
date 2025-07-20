@@ -58,7 +58,7 @@ public class TozluPages {
     @FindBy(xpath = "(//*[text()='Kaydet ve Ödemeye Geç'])[1]")
     public WebElement kaydetVeOdemeyeGec;
 
-    @FindBy(xpath = "//select[@class='form-control cityList']")
+    @FindBy(xpath = "(//select[@class='form-control cityList'])[2]")
     public WebElement sehirDropDownMenu;
 
     @FindBy(xpath = "//select[@class='form-control districtList']")
@@ -111,6 +111,9 @@ public class TozluPages {
 
     @FindBy(xpath = "//button[@class='btn btn-indent']")
     public WebElement adresSilmeButonu;
+
+    @FindBy(xpath = "(//button)[1]")
+    public WebElement anaSayfaKampanyaKapatmaButonu;
 
 
 
